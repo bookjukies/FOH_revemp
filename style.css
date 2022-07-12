@@ -1,0 +1,375 @@
+/* <---major reset---> */
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+/* <---major reset Ended---> */
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: scroll;
+}
+
+/* contains the enter content */
+.container {
+    height: max-content;  
+}
+
+/* site header */
+header{
+    /* background-color: white; */
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 1.5fr;
+    grid-template-rows: max-content max-content;
+    align-items: center;
+    justify-items: center;
+    background-image: linear-gradient(to right, white 1%, #fc77c971 );
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+}
+
+/* header logo */
+.logo{
+    height: 4rem;
+    width: 4rem;
+
+}
+.logo img{
+    width: 100%;
+    
+}
+
+/* site navigation */
+
+nav{
+    place-content: center;
+    width: 4.5fr;
+    
+}
+nav ul{
+    width: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+nav ul li{
+    list-style: none;
+    justify-content: space-evenly;
+}
+nav a{
+    text-decoration: none;
+    /* margin: 1rem; */
+    
+    padding: .5rem 1rem;
+    color: rgb(61, 46, 57);
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+.nav a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #fc77c971;
+    border: 1px;
+    border-radius: 1rem;
+    font-weight: 900;
+}
+
+/* Booking button  on the header*/
+
+header button{
+    background-color: #0f5bffb9;
+    color: whitesmoke;
+    border: 1px solid #0f5bffb9;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    place-self: end;
+    width: max-content;
+    font-weight: 900;
+}
+header button:hover {
+    padding: .7rem 1.4rem;
+    letter-spacing: .2rem;
+    font-size: 1rem;
+    font-family: Helvetica,sans-serif;
+    background-color: #fc77c9cb;
+    border: 1px solid #fc77c99c;
+    color: rgb(255, 255, 255);
+}
+/* <---End Header---> */
+
+/* <---Body Content---> */
+.main{
+    padding: 0;
+   
+}
+
+/* <---social icons */
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 15rem;
+    left: .5vw;
+    top: 10rem;
+    z-index: 20;
+}
+.socials img{
+    width: 30px;
+    
+}
+
+/* <---hero container---> */
+.hero{
+   
+    height: 100vh;
+    
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.3)),url(./images/foh-stage.jpg);
+    background-size: cover;
+    position: sticky;
+    top: 4rem;
+    scroll-snap-align: start;
+}
+.hero h1{
+    color: white;
+    position: sticky;
+    left: 5rem;
+    top: 200px;
+}
+.big{
+    display: block;
+    font-size: 5rem;
+    font-family:sans-serif;
+    margin: 0 5rem;
+}
+.small{
+    margin: 0 11rem;
+   
+}
+
+/* <React attetchment> */
+#root{
+
+    background-color: white;
+    height: max-content;
+    position: sticky;
+    top: 25vh;
+    z-index: 5;
+    padding:0 5vw;
+  
+    
+}
+
+/* music player */
+.player{
+    background-image: linear-gradient(to right, white 1%, #fc77c936);
+    margin:0 -5vw;
+    padding: 2.5vh 5vw;
+    height: 100vh;
+    scroll-snap-align: start;
+
+}
+
+/* <album and track list> */
+.album{
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-areas: 
+    "cover_image description track_list";
+    column-gap: 2rem;
+   
+
+}
+.cover{
+    grid-area: cover_image;
+    width: 20rem;
+    height: 15rem;
+}
+.cover img{
+    width: 100%;
+   
+    
+
+}
+.disk{
+    background-color: white;
+    position: relative;
+    top: -70%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    z-index: 1000;
+    border-radius: 100%;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.description{
+
+    grid-area: description;
+    
+}
+.meta_data{
+
+}
+.meta_data span{
+
+}
+.meta_data h2{
+    text-align: center;
+    margin-bottom: 4%;
+    
+}
+.words{
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-areas: "foh_word foh_booth";
+}
+.words p{
+    margin-top: 2rem;
+    grid-area: foh_word;
+    width:100%;
+}
+.booth{
+    width: 150%;
+    grid-area: foh_booth;
+    display: inline;
+    position: relative;
+    left:-60%;
+    top: -20%;
+    display: none;
+}
+.track_container{
+    grid-area: track_list;
+    
+
+}
+.track_list{
+    list-style: none;
+    
+}
+.track{
+    margin: 2rem;
+}
+.download{
+    display: inline;
+    width: 14px;
+    float: right;
+  
+}
+
+/* <---Music plaer active states--->*/
+.playing{
+    text-align: center;
+    margin-top: 5vw;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.progress_container{
+    height: 0.6rem;
+    background-color: rgb(159, 158, 158);
+    border-radius: 2rem;
+}
+.progress_bar{
+    background-color: #0f5bffb9;
+    height: .6rem;
+    border-radius: 2rem;
+    width: 0;
+    
+}
+.controls{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: center;
+   padding-top: 2rem;
+
+}
+.controls img{
+   
+    width: 2rem;
+    margin-bottom: 5vh;
+   
+}.controls img:hover {
+    width: 3rem;
+
+}
+.play{
+    display: none;
+    animation: rotate 3s linear infinite;
+    border-radius: 100%;
+}
+.play_anime {
+    animation: rotate 3s linear infinite;
+    border-radius: 100%;
+}
+
+/* <---Music player ended---> */
+#about{
+    height: 100vh;
+    width: 93.8vw;
+    scroll-snap-align: start;
+    display: grid;
+    background-image: linear-gradient(to right, white 1%, #fc77c936);
+    grid-template-columns: 3fr 4fr;
+    justify-content: end;
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.about_img{
+    width: 100%;
+}
+.about_words{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    font-size: 1.6rem;
+    text-align: center;  
+    
+}
+
+#beats{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    background-image: linear-gradient(to right, white 1%, #fc77c936);
+    font-size: 3rem;
+    font-weight: 900;
+    width: 98.5vw;
+    margin-left: -5vw ;
+}
+
+.video{
+    height: 100vh;
+    scroll-snap-align: start;
+    z-index: 10;
+}
+iframe{
+  height: 100vh;
+  width: 98.5vw;
+  margin: 0 -5vw 0 -5vw;
+}
+/* root ended */
+
+
+/* footer */

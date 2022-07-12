@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/fevacon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>FOH</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header component -->
+      <header>
+        <div class="logo item">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+        <nav class="nav item">
+          <ul>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#beats">Beats</a></li>
+            <li><a href="#video">Music Video</a></li>
+          </ul>
+        </nav>
+        <a
+          href="https://api.whatsapp.com/send?phone=%2B27764398902&fbclid=IwAR2lCXm706C-H6dPrX9jszbFsNHpWEGWb0fLSMCdfk8m6F04wsVviTn0pLk"
+          ><div class="book item"><button>BOOK NOW!</button></div></a
+        >
+      </header>
+
+      <div class="main">
+        <!----social links----->
+        <div class="socials">
+          <a href="https://web.facebook.com/FohRSA"
+            ><img src="./icons/facebook.svg"
+          /></a>
+          <a href="https://www.instagram.com/foh_rsa/"
+            ><img src="./icons/instagram.svg"
+          /></a>
+          <a
+            href="https://www.youtube.com/channel/UCBZTb4zo0rC8rSwS6IFDtTQ/featured"
+            ><img src="./icons/youtube.svg"
+          /></a>
+        </div>
+        <!-- close socials -->
+
+        <!-- hero_container -->
+        <div class="hero">
+          <h1 class="big_name">
+            <span class="big">FOH</span> <span class="small">RSA</span>
+          </h1>
+        </div>
+
+        <!---_ react attectement ---->
+        <div id="root">
+          <!-- music app html -->
+          <div id="music" class="player">
+            <!-- album and track lists -->
+            <div class="album">
+              <div class="cover">
+                <img src="./images/cover.jpg" alt="" />
+                <div class="disk"></div>
+              </div>
+              <div class="track_container">
+                <ul class="track_list">
+                  <li class="track">
+                    Melissa
+                    <img
+                      src="./icons/circle-down.svg"
+                      class="download"
+                      alt="download"
+                    />
+                  </li>
+                  <li class="track">
+                    Pracious Time
+                    <img
+                      src="./icons/circle-down.svg"
+                      class="download"
+                      alt="download"
+                    />
+                  </li>
+                  <li class="track">
+                    Drama
+                    <img
+                      src="./icons/circle-down.svg"
+                      class="download"
+                      alt="download"
+                    />
+                  </li>
+                  <li class="track">
+                    Precious Time
+                    <img
+                      src="./icons/circle-down.svg"
+                      class="download"
+                      alt="download"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!----song discription and quoetes by FoH---->
+              <div class="description">
+                <div class="meta_data">
+                  <h2 class="album_name">LOVE IS TREE OF LIFE</h2>
+                  <p>Artist: <span class="artist">FOH</span></p>
+                  <p>Featuring: <span class="feature"></span></p>
+                  <p>
+                    Producer: <span class="producer">FOH & classic Beats</span>
+                  </p>
+                  <p>Release date: <span class="year">2022</span></p>
+                </div>
+                <div class="words">
+                  <p class="story">
+                    i met melissa at college 2020 she was struggling with her
+                    registration then i decided to assist her. we started to hag
+                    out i still remember the moment having strike we chilled
+                    together and that where i even noticed her beautiful eyes.
+                    honestly she was a very complicated person because i thought
+                    she felt something too we were so connected.
+                  </p>
+                  <img class="booth" src="./images/speack.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- album Ended -->
+
+            <!-- Playing music active state -->
+            <div class="playing">
+              <span>Melissa</span>
+              <span class="audio_anchor"></span>
+              <audio class="song_1" src="./audio/Drama.mp3"></audio>
+            </div>
+            <!-- time elepse -->
+            <div class="time">
+              <span class="time_start">0:00</span>
+              <span class="time_end">3:30</span>
+            </div>
+            <div class="progress_container">
+              <div class="progress_bar"></div>
+            </div>
+
+            <!-- Controls for the music player -->
+            <div class="controls">
+              <img src="./icons/backward.svg" id="prev" />
+
+              <img src="./icons/circle-play.svg" id="play" />
+              <img src="./icons/circle-pause.svg" class="play" id="pause" />
+
+              <img src="./icons/forward.svg" id="next" />
+            </div>
+          </div>
+          <!--about section-->
+          <div id="about">
+            <div class="about_words">
+              <h2>ABOUT FOH RSA</h2>
+              <p>
+                FOH RSA, Mthandeni Sphiwe cele. Date of birth 22 july 1999 was
+                born in manguzi, an artist and producer.
+              </p>
+            </div>
+            <div class="pic">
+              <img class="about_img" src="./images/foh-pic.jpg" alt="" />
+            </div>
+          </div>
+          <!--beats section-->
+          <div id="beats">Beats Coming Soon To A Site Near You</div>
+          <div class="video" id="video">
+            <iframe
+              src="https://www.youtube.com/embed/a9OPRW3ubww"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- main content ended -->
+
+      <!-- footer component -->
+      <footer></footer>
+    </div>
+    <script src="./react.js"></script>
+  </body>
+</html>
